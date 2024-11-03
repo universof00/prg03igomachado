@@ -8,17 +8,14 @@ package br.com.ifba.atividade03.view;
  * @author oxede
  */
 import java.time.LocalDate;
+
 public class NewJFrameCalculadora extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrameCalculadora
-     */
     public NewJFrameCalculadora() {
         initComponents();
         //Ao iniciar, irá mostrar o ano atual
         LocalDate dataAtual = LocalDate.now();
-        int anoAtual = dataAtual.getYear();
-        txtAnoMostrado.setText(Integer.toString(anoAtual));
+        spnanoescolhido.setValue(dataAtual.getYear());
     }
 
     /**
@@ -32,142 +29,71 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         lblNascimento = new javax.swing.JLabel();
-        txtAnoMostrado = new javax.swing.JTextField();
-        btnAumentarAno = new javax.swing.JButton();
-        btnDiminuirAno = new javax.swing.JButton();
         btnCalcularIdade = new javax.swing.JButton();
         lblIdade = new javax.swing.JLabel();
         lblIdadeMostrada = new javax.swing.JLabel();
+        lbliconeperfil = new javax.swing.JLabel();
+        spnanoescolhido = new javax.swing.JSpinner();
 
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblNascimento.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         lblNascimento.setText("Ano de Nascimento");
-
-        txtAnoMostrado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txtAnoMostrado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAnoMostradoActionPerformed(evt);
-            }
-        });
-
-        btnAumentarAno.setText("UP");
-        btnAumentarAno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarAnoActionPerformed(evt);
-            }
-        });
-
-        btnDiminuirAno.setText("Down");
-        btnDiminuirAno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDiminuirAnoActionPerformed(evt);
-            }
-        });
+        getContentPane().add(lblNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 33, 186, 40));
 
         btnCalcularIdade.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnCalcularIdade.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br.com.ifba.atividade03.images\\calculadoraicone.png")); // NOI18N
         btnCalcularIdade.setText("Calcular");
         btnCalcularIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcularIdadeActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCalcularIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 103, -1, -1));
 
         lblIdade.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         lblIdade.setText("Idade:");
+        getContentPane().add(lblIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 199, 116, -1));
 
         lblIdadeMostrada.setFont(new java.awt.Font("Segoe UI", 0, 37)); // NOI18N
         lblIdadeMostrada.setForeground(new java.awt.Color(255, 0, 0));
         lblIdadeMostrada.setText("............");
+        getContentPane().add(lblIdadeMostrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 198, 124, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(btnCalcularIdade))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtAnoMostrado, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnDiminuirAno, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAumentarAno, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblIdadeMostrada, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnAumentarAno, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDiminuirAno, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtAnoMostrado)
-                    .addComponent(lblNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(btnCalcularIdade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIdade)
-                    .addComponent(lblIdadeMostrada))
-                .addGap(25, 25, 25))
-        );
+        lbliconeperfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br.com.ifba.atividade03.images\\perfilicon.png")); // NOI18N
+        getContentPane().add(lbliconeperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 200, 210));
+
+        spnanoescolhido.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        spnanoescolhido.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spnanoescolhidoStateChanged(evt);
+            }
+        });
+        getContentPane().add(spnanoescolhido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 120, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtAnoMostradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnoMostradoActionPerformed
-        //Trecho comentado por causa que, já está inicializado o ano.
-        
-        /*LocalDate dataAtual = LocalDate.now();
-        int anoAtual = dataAtual.getYear();
-        txtAnoMostrado.setText(Integer.toString(anoAtual));*/
-    }//GEN-LAST:event_txtAnoMostradoActionPerformed
-
-    private void btnAumentarAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarAnoActionPerformed
-       //Pega o ano atual no txtAnoMostrado e incrementa +1
-        int anoAtual = Integer.parseInt(txtAnoMostrado.getText());
-        anoAtual+= 1;
-        txtAnoMostrado.setText(Integer.toString(anoAtual));
-    }//GEN-LAST:event_btnAumentarAnoActionPerformed
-
-    private void btnDiminuirAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiminuirAnoActionPerformed
-        //Pega o ano atual no txtAnoMostrado e decrementa -1
-        int anoAtual = Integer.parseInt(txtAnoMostrado.getText());
-        anoAtual+= - 1;
-        txtAnoMostrado.setText(Integer.toString(anoAtual));
-    }//GEN-LAST:event_btnDiminuirAnoActionPerformed
-
     private void btnCalcularIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularIdadeActionPerformed
         //Pega o ano atual
-        LocalDate dataAtual = LocalDate.now();
-        int anoAtual = dataAtual.getYear();
-        //Pega o ano escolhido pelo usuário
-        int idadePega = Integer.parseInt(txtAnoMostrado.getText());
+        LocalDate dataAtual = LocalDate.now();    
         //Faz o calculo da idade
-        int resultado = anoAtual - idadePega;
+        int resultado = dataAtual.getYear() - (Integer) spnanoescolhido.getValue();
         //Verificando se a idade é menor do que 0, caso seja, entra na condição
         if(resultado < 0){
-            lblIdadeMostrada.setText("Ainda não Nasceu!");
+            lblIdadeMostrada.setText("0");
         }else{
             lblIdadeMostrada.setText(Integer.toString(resultado));
-    }
+        }
     }//GEN-LAST:event_btnCalcularIdadeActionPerformed
+
+    private void spnanoescolhidoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spnanoescolhidoStateChanged
+          //int resultaddo = (Integer) spntestes.getValue();
+        
+    }//GEN-LAST:event_spnanoescolhidoStateChanged
 
     /**
      * @param args the command line arguments
@@ -205,13 +131,12 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAumentarAno;
     private javax.swing.JButton btnCalcularIdade;
-    private javax.swing.JButton btnDiminuirAno;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblIdade;
     private javax.swing.JLabel lblIdadeMostrada;
     private javax.swing.JLabel lblNascimento;
-    private javax.swing.JTextField txtAnoMostrado;
+    private javax.swing.JLabel lbliconeperfil;
+    private javax.swing.JSpinner spnanoescolhido;
     // End of variables declaration//GEN-END:variables
 }
