@@ -45,7 +45,7 @@ public class Genio extends javax.swing.JFrame {
         lblbalaogenio.setText("De 1 a 5, tente adivinhar");
         getContentPane().add(lblbalaogenio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 260, 150));
 
-        lblbalao.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br\\com\\ifba\\atividade04\\imagens\\genio.png")); // NOI18N
+        lblbalao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/imagens/genio.png"))); // NOI18N
         lblbalao.setText("jLabel1");
         getContentPane().add(lblbalao, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 292, 324));
 
@@ -53,9 +53,9 @@ public class Genio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntpalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntpalpiteActionPerformed
+        //Pegando os parâmetros
         int numgenio = (int) (Math.random() * 5) + 1;
         int numusuario = Integer.parseInt(spnvalor.getValue().toString());
-        
        lblbalaogenio.setText(numgenio == numusuario ? "Acertou" : "Errou, eu pensei no " + numgenio);  
     }//GEN-LAST:event_bntpalpiteActionPerformed
 
