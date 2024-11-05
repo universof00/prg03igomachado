@@ -9,9 +9,9 @@ package br.com.ifba.atividade03.view;
  */
 import java.time.LocalDate;
 
-public class NewJFrameCalculadora extends javax.swing.JFrame {
+public class Calculadora extends javax.swing.JFrame {
 
-    public NewJFrameCalculadora() {
+    public Calculadora() {
         initComponents();
         //Ao iniciar, irá mostrar o ano atual
         LocalDate dataAtual = LocalDate.now();
@@ -45,7 +45,6 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
         getContentPane().add(lblNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 33, 186, 40));
 
         btnCalcularIdade.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        btnCalcularIdade.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br.com.ifba.atividade03.images\\calculadoraicone.png")); // NOI18N
         btnCalcularIdade.setText("Calcular");
         btnCalcularIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,17 +61,10 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
         lblIdadeMostrada.setForeground(new java.awt.Color(255, 0, 0));
         lblIdadeMostrada.setText("............");
         getContentPane().add(lblIdadeMostrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 198, 124, -1));
-
-        lbliconeperfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br.com.ifba.atividade03.images\\perfilicon.png")); // NOI18N
         getContentPane().add(lbliconeperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 200, 210));
 
         spnanoescolhido.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        spnanoescolhido.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spnanoescolhidoStateChanged(evt);
-            }
-        });
-        getContentPane().add(spnanoescolhido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 120, 50));
+        getContentPane().add(spnanoescolhido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 120, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -89,11 +81,6 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
             lblIdadeMostrada.setText(Integer.toString(resultado));
         }
     }//GEN-LAST:event_btnCalcularIdadeActionPerformed
-
-    private void spnanoescolhidoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spnanoescolhidoStateChanged
-          //int resultaddo = (Integer) spntestes.getValue();
-        
-    }//GEN-LAST:event_spnanoescolhidoStateChanged
 
     /**
      * @param args the command line arguments
@@ -112,20 +99,21 @@ public class NewJFrameCalculadora extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrameCalculadora().setVisible(true);
+                new Calculadora().setVisible(true);
             }
         });
     }
