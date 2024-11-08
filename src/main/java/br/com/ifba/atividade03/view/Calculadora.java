@@ -45,7 +45,6 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().add(lblNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 33, 186, 40));
 
         btnCalcularIdade.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        btnCalcularIdade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/imagens/calculadoraicone.png"))); // NOI18N
         btnCalcularIdade.setText("Calcular");
         btnCalcularIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +62,7 @@ public class Calculadora extends javax.swing.JFrame {
         lblIdadeMostrada.setText("............");
         getContentPane().add(lblIdadeMostrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 198, 124, -1));
 
-        lbliconeperfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/imagens/perfilicon.png"))); // NOI18N
+        lbliconeperfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\oxede\\Documents\\NetBeansProjects\\atividade\\src\\main\\java\\br\\com\\ifba\\atividade03\\imagens\\perfilicon.png")); // NOI18N
         getContentPane().add(lbliconeperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 200, 210));
 
         spnanoescolhido.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
