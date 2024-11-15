@@ -9,6 +9,7 @@ public class Fatorar extends javax.swing.JFrame {
     public Fatorar() {
         initComponents();
     }
+    
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
