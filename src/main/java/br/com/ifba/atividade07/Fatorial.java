@@ -8,7 +8,8 @@ public class Fatorial {
      private int n;
      private int fat = 1;
      private String formula = "";
-
+     /** Metodo para fazer o fatorial de um
+      número escolhido pelo usuário*/
     public void setValor(int n) {
         int num = n;
         int f = 1;

@@ -12,14 +12,14 @@ import javax.swing.DefaultListModel;
  * @author oxede
  */
 public class Vetor extends javax.swing.JFrame {
-
+    /** Iniciando o contrutor com todos os valores zerados */
     public Vetor() {
         initComponents();
         for(int i = 0; i < vet.length; i++){
            lista.addElement(vet[i]);  
         }
     }
-    
+    /** Criando uma lista */
     int vet[] = new int [5]; 
     DefaultListModel lista = new DefaultListModel();
     int selecionado = 0; 
@@ -131,7 +131,7 @@ public class Vetor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /** Metodo para adicionar um número na lista */
     private void btnadicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadicionarActionPerformed
         vet[selecionado] = Integer.parseInt(spnescolha.getValue().toString());
         lista.removeAllElements();
@@ -139,12 +139,12 @@ public class Vetor extends javax.swing.JFrame {
            lista.addElement(vet[i]);  
         }
     }//GEN-LAST:event_btnadicionarActionPerformed
-
+    /** Metodo para selecionar o lugar no veto com o clique do mouse */
     private void lstvetorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstvetorMouseClicked
         selecionado = lstvetor.getSelectedIndex();
        lblnaposicao.setText("[" + selecionado +"]");
     }//GEN-LAST:event_lstvetorMouseClicked
-
+    /** Metodo para remover um determinado número escolhido do vetor */
     private void btnremoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremoverActionPerformed
         vet[selecionado] = 0;
         lista.removeAllElements();
@@ -153,7 +153,7 @@ public class Vetor extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnremoverActionPerformed
-
+    /** Metodo para reordenar todo o vetor */
     private void btnordenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnordenarActionPerformed
         Arrays.sort(vet);
         lista.removeAllElements();

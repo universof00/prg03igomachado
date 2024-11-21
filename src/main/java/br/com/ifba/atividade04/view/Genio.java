@@ -5,7 +5,7 @@
 package br.com.ifba.atividade04.view;
 
 public class Genio extends javax.swing.JFrame {
-
+    /** Iniciando o construtor com a frase  */
     public Genio() {
         initComponents();
         lblbalaogenio.setText("<html>Vou pensar em um valor entre 1 e 5, tente advinhar!<html>");
@@ -51,9 +51,10 @@ public class Genio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /** Metodo para gerar o número aleatorio
+     e em seguida testar para ver se os números são iguais */
     private void bntpalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntpalpiteActionPerformed
-        //Pegando os parâmetros
+        
         int numgenio = (int) (Math.random() * 5) + 1;
         int numusuario = Integer.parseInt(spnvalor.getValue().toString());
        lblbalaogenio.setText(numgenio == numusuario ? "Acertou" : "Errou, eu pensei no " + numgenio);  

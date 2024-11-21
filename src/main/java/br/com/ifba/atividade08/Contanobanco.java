@@ -55,11 +55,11 @@ public class Contanobanco {
         this.setSaldo(deposito);
     }
             
-            
+         /** Metodo para abrir uma conta */   
      public void abrirconta(String tipo) {
         this.setTipo(tipo);
         this.setStatus(true);
-
+        /** Verificando o tipo da conta */
         if (tipo.equals("cc")) {
             this.setSaldo(50);
         } else if (tipo.equals("cp")) {
@@ -68,7 +68,7 @@ public class Contanobanco {
 
         System.out.println("Conta criada com sucesso!!");
     }
-     
+     /** Metodo para fechar a conta */
      public void fecharConta() {
         if (this.getSaldo() > 0) {
             System.out.println("Conta ainda tem dinheiro");
@@ -79,7 +79,8 @@ public class Contanobanco {
             System.out.println("Conta fechada com sucesso!");
         }
     }
-     
+     /** Metodo para depositar dinheiro em uma
+      conta especifica*/
      public void depositar(float valor) {
         if (this.isStatus()) {
             this.setDepositar(valor);
@@ -88,7 +89,7 @@ public class Contanobanco {
             System.out.println("Conta fechada!");
         }
     }
-     
+     /** Metodo para sacar dinheiro */
      public void sacar(float valor) {
         if (this.isStatus()) {
             if (this.getSaldo() >= valor) {
