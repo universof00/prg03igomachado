@@ -10,8 +10,8 @@ package br.com.ifba.atividade10;
  */
 public class Testendoocodigo {
     public static void main(String[] args) {
-        Pessoa p1 = new Pessoa("João", 25, "M");
-        Livro l1 = new Livro("Aprendendo C", "Igo Machado", 9000000, p1);
+        Pessoa p1 = new Pessoa("Igo Machado", 25, "M");
+        Livro l1 = new Livro("Aprendendo C", "Machado Igo", 9000000, p1);
 
         l1.abrir();
         l1.folhear(10000);

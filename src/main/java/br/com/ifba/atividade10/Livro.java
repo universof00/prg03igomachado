@@ -28,13 +28,12 @@ public class Livro implements Publicacao {
     }
     
     public String detalhes() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", totalPaginas=" + totalPaginas +
-                ", paginaAtual=" + paginaAtual +
-                ", aberto=" + aberto +
-                ", leitor=" + leitor.getNome() +
+        return "Livro:" + titulo + '\'' +
+                "Autor: '" + autor + '\'' +
+                "Total de Páginas:" + totalPaginas +
+                "Página atual: " + paginaAtual +
+                "Aberto: " + aberto +
+                "Leitor: " + leitor.getNome() +
                 '}';
     }
     public String getTitulo() {
