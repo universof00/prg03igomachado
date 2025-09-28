@@ -9,4 +9,5 @@ Esse Repositório tem como objetivo adicionar todas as atividades da disciplina 
 # Atividades Feitas até esse momento...
 
 
+- Atividade 03: ✅
 
