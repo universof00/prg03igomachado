@@ -49,14 +49,16 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblAnoDeNascimento.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
+        lblAnoDeNascimento.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
         lblAnoDeNascimento.setText("Ano de Nascimento");
-        getContentPane().add(lblAnoDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+        getContentPane().add(lblAnoDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        spnIdadeInserida.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
-        getContentPane().add(spnIdadeInserida, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 230, -1));
+        spnIdadeInserida.setFont(new java.awt.Font("Liberation Sans", 0, 56)); // NOI18N
+        spnIdadeInserida.setModel(new javax.swing.SpinnerNumberModel());
+        spnIdadeInserida.setToolTipText("");
+        getContentPane().add(spnIdadeInserida, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 360, -1));
 
-        btnCalcularIdade.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
+        btnCalcularIdade.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
         btnCalcularIdade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/image/calculadoraicone.png"))); // NOI18N
         btnCalcularIdade.setText("Calcular Idade");
         btnCalcularIdade.addActionListener(new java.awt.event.ActionListener() {
@@ -64,18 +66,17 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
                 btnCalcularIdadeActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCalcularIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
+        getContentPane().add(btnCalcularIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 500, 70));
 
         lblImagemPerfil.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
         lblImagemPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/image/perfilicon.png"))); // NOI18N
         getContentPane().add(lblImagemPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 250, 260));
 
-        lblResultado.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
+        lblResultado.setFont(new java.awt.Font("Liberation Sans", 0, 56)); // NOI18N
         lblResultado.setText("...................................................");
         getContentPane().add(lblResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 580, -1));
 
         lblViajante.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
-        lblViajante.setText("jLabel1");
         getContentPane().add(lblViajante, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
         pack();
@@ -85,6 +86,15 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
         // TODO add your handling code here:
         LocalDate ano = LocalDate.now();
         int idade = (int) spnIdadeInserida.getValue();
+        
+        /**
+         * Verifico se a idade é menor do que zero, caso seja, nem calcula.
+         * e "zera" o lblResultado
+         */
+        if(idade < 0){
+            lblResultado.setText("...............................................");
+            return;
+        }
         /**
          * Faz o calculo da idade 
          */
@@ -93,8 +103,10 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
         if(resultado < 0){
             /**
              * Se idade for menor do que 0, imprime essa mensagem na tela
+             * e volta ao estado inicial o lblResultado com os ..... 
              */
            lblViajante.setText("CALMA, VIAJANTE NO TEMPO!");
+           lblResultado.setText("...............................................");
         }else{
             /**
              * "Zera" a o lblViajante
@@ -105,13 +117,13 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
                /**
                 * Se idade for igual a 1, remove o s de anos
                 */
-              lblResultado.setText("Você tem " + resultado + " ano");
+              lblResultado.setText("Você tem " + resultado + " ano.");
               return; 
            }
            /**
-            * Mosa mensagem mais a idade
+            * Mostra mensagem mais a idade
             */
-           lblResultado.setText("Você tem " + resultado + " anos");
+           lblResultado.setText("Você tem " + resultado + " anos.");
         }
         
     }//GEN-LAST:event_btnCalcularIdadeActionPerformed
