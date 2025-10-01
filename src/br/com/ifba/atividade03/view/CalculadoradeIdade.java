@@ -54,7 +54,6 @@ public class CalculadoradeIdade extends javax.swing.JFrame {
         getContentPane().add(lblAnoDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         spnIdadeInserida.setFont(new java.awt.Font("Liberation Sans", 0, 56)); // NOI18N
-        spnIdadeInserida.setModel(new javax.swing.SpinnerNumberModel());
         spnIdadeInserida.setToolTipText("");
         getContentPane().add(spnIdadeInserida, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 360, -1));
 
