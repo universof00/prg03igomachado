@@ -135,7 +135,7 @@ public class Genio extends javax.swing.JFrame {
     private void cmbDificuldadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDificuldadeActionPerformed
         // TODO add your handling code here:
        
-        //dificulade: Bebê, Fácil, Médio, Difícil.
+        //dificulades: Bebê, Fácil, Médio, Difícil.
         
         String dificuldade = (String) cmbDificuldade.getSelectedItem();
         /**
