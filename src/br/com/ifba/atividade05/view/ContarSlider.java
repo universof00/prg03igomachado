@@ -159,6 +159,13 @@ public class ContarSlider extends javax.swing.JFrame {
         /**
          * Pega o valor que esta no slider passo e atualiza o lblTextoPasso
          */
+        javax.swing.event.ChangeEvent verificando = new javax.swing.event.ChangeEvent(sldPasso);
+        /**
+         *  Metodos criados e com  
+         */
+        sldInicioStateChanged(verificando);
+        sldFimStateChanged(verificando);
+        
         int passo = sldPasso.getValue();
         lblTextoPasso.setText(Integer.toString(passo));
     }//GEN-LAST:event_sldPassoStateChanged
