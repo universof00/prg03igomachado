@@ -5,6 +5,7 @@
 package br.com.ifba;
 
 import br.com.ifba.atividade06.view.Fatorial;
+import br.com.ifba.atividade07.classe.Banco;
 
 /**
  *
@@ -19,11 +20,17 @@ public class Prg03igomachado {
         // TODO code application logic here
         System.out.println("Olá, Mundo!");
         
-        Fatorial fatorial = new Fatorial();
+        /*Fatorial fatorial = new Fatorial();
         
         fatorial.setValor(500);
         System.out.println(fatorial.getFatorial());
-        System.out.println(fatorial.getFormula());
+        System.out.println(fatorial.getFormula());*/
+        
+        Banco novaConta = new Banco();
+        novaConta.abrirConta("Igo Machado", "cp",  "123");
+        novaConta.depositar(500);
+        novaConta.pagarMensalidade();
+        novaConta.sacar(100);
     }
     
 }
