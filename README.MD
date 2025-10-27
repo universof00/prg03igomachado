@@ -18,4 +18,5 @@ Esse Repositório tem como objetivo adicionar todas as atividades da disciplina 
 - Atividade 07: ✅
 - Atividade 08: ✅
 - Atividade 09: ✅
+- Atividade 10: ✅
 
